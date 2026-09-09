@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@id/cardView" android:tag="layout/accessibility_manager_dialog_0" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/bg_day" app:cardCornerRadius="32.0dip" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:paddingTop="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="32.0sp" android:textStyle="bold" android:textColor="@color/text_light_day" android:id="@id/titleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accessibility_manager_title" android:layout_marginHorizontal="56.0dip" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/text_hint_day" android:id="@id/hintTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/accessibility_manager_hint" android:layout_marginHorizontal="56.0dip" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginHorizontal="56.0dip">
+            <TextView android:textSize="24.0sp" android:textColor="@color/text_light_day" android:id="@id/toggleAllLabelTv" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/accessibility_toggle_all" android:layout_weight="1.0" />
+            <com.kyleduo.switchbutton.SwitchButton android:id="@id/toggleAllSwitch" android:layout_width="80.0dip" android:layout_height="44.0dip" app:kswBackColor="@drawable/switch_btn_bg" app:kswThumbColor="@color/white" app:kswThumbMargin="8.0dip" app:kswThumbRangeRatio="2.3" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginHorizontal="56.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="24.0sp" android:textColor="@color/text_light_day" android:id="@id/daemonToggleLabelTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accessibility_daemon_toggle" />
+                <TextView android:textSize="18.0sp" android:textColor="@color/text_hint_day" android:id="@id/daemonToggleHintTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/accessibility_daemon_toggle_hint" />
+            </LinearLayout>
+            <com.kyleduo.switchbutton.SwitchButton android:id="@id/daemonToggleSwitch" android:layout_width="80.0dip" android:layout_height="44.0dip" app:kswBackColor="@drawable/switch_btn_bg" app:kswThumbColor="@color/white" app:kswThumbMargin="8.0dip" app:kswThumbRangeRatio="2.3" />
+        </LinearLayout>
+        <View android:background="@color/divider_day" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="16.0dip" android:layout_marginHorizontal="56.0dip" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/serviceListRv" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="16.0dip" android:maxHeight="400.0dip" android:layout_weight="1.0" android:layout_marginHorizontal="40.0dip" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/dialog_btn_divider" android:showDividers="middle" android:dividerPadding="10.0dip" android:layout_marginHorizontal="56.0dip" android:layout_marginVertical="32.0dip">
+            <TextView android:textSize="28.0sp" android:textStyle="bold" android:textColor="@color/text_dark_day" android:gravity="center" android:id="@id/closeBtn" android:background="@drawable/dialog_ok_btn_bg" android:layout_width="0.0dip" android:layout_height="96.0dip" android:text="@string/dialog_close" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

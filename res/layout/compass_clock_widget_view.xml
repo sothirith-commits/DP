@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/compass_clock_widget_view_0" android:padding="@dimen/dp_12" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <eightbitlab.com.blurview.BlurView android:id="@id/blurView" android:background="@drawable/compass_clock_widget_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" app:blurOverlayColor="@color/white_60_transparent" />
+    <com.deepalhome.launcher.time.CompassClockView android:id="@id/compassClockView" android:padding="8.0dip" android:layout_width="432.0dip" android:layout_height="432.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" android:paddingHorizontal="48.0dip" android:paddingVertical="16.0dip" app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" app:spanCount="3" />
+    <TextView android:textSize="24.0sp" android:textColor="@color/text_light_day" android:layout_gravity="center" android:id="@id/emptyView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/empty_float_ball_icons" />
+</FrameLayout>

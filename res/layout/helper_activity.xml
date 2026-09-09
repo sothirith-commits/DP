@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:tag="layout/helper_activity_0" android:background="@color/setting_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.MaterialToolbar android:theme="?actionBarTheme" android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" android:elevation="4.0dip" app:subtitle="@string/helper_not_connected" app:subtitleTextColor="@color/white" app:title="@string/adb_tool_title" app:titleTextColor="@color/white" />
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:paddingTop="16.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip">
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="?colorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/helper_section_connection" />
+            <com.google.android.material.card.MaterialCardView android:id="@id/toggleWirelessDebugBtn" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" style="@style/HelperCardStyle">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/wirelessDebugIcon" android:background="@drawable/icon_circle_bg" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/setting_card_wifi_off" android:backgroundTint="@color/helper_icon_bg_wifi" app:tint="?colorPrimary" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dip">
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/text_color" android:id="@id/wirelessDebugTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wireless_debug_enable" />
+                        <TextView android:textSize="13.0sp" android:textColor="@color/text_color_subtitle" android:id="@id/wirelessDebugDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/wireless_debug_toggle_hint" />
+                    </LinearLayout>
+                    <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_arrow_right" app:tint="@color/text_color_subtitle" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="?colorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/helper_section_permission" />
+            <com.google.android.material.card.MaterialCardView android:id="@id/grantDeepalHomeBtn" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" app:cardBackgroundColor="?colorPrimary" app:cardCornerRadius="16.0dip" app:cardElevation="0.0dip" app:rippleColor="#33ffffff">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/icon_circle_bg" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/permission_ic" android:backgroundTint="#33ffffff" app:tint="@color/helper_primary_card_text" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dip">
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/helper_primary_card_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/one_key_grant_title" />
+                        <TextView android:textSize="13.0sp" android:textColor="@color/helper_primary_card_text_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/float_log_permission_message" />
+                    </LinearLayout>
+                    <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_arrow_right" app:tint="@color/helper_primary_card_text" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@id/unlockAdbBtn" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" style="@style/HelperCardStyle">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/icon_circle_bg" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/permission_ic" android:backgroundTint="@color/helper_icon_bg_orange" app:tint="#ffff9800" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dip">
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/text_color" android:id="@id/unlockAdbTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unlock_adb" />
+                        <TextView android:textSize="13.0sp" android:textColor="@color/text_color_subtitle" android:id="@id/unlockAdbDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/unlock_adb_desc" />
+                    </LinearLayout>
+                    <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_arrow_right" app:tint="@color/text_color_subtitle" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="?colorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="@string/helper_section_system" />
+            <com.google.android.material.card.MaterialCardView android:id="@id/openSystemSettingsBtn" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" style="@style/HelperCardStyle">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/icon_circle_bg" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_settings" android:backgroundTint="@color/helper_icon_bg_purple" app:tint="#ff9c27b0" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dip">
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/open_system_settings" />
+                        <TextView android:textSize="13.0sp" android:textColor="@color/text_color_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/open_system_settings_desc" />
+                    </LinearLayout>
+                    <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_arrow_right" app:tint="@color/text_color_subtitle" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@id/disableHealthManagerBtn" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" style="@style/HelperCardStyle">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/icon_circle_bg" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/disable_ic" android:backgroundTint="@color/helper_icon_bg_blue" app:tint="#ff2196f3" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dip">
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/disable_kill_background" />
+                        <TextView android:textSize="13.0sp" android:textColor="@color/text_color_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/disable_kill_background_desc" />
+                    </LinearLayout>
+                    <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_arrow_right" app:tint="@color/text_color_subtitle" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@id/repairBtn" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" style="@style/HelperCardStyle">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/icon_circle_bg" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/repair_ic" android:backgroundTint="@color/helper_icon_bg_green" app:tint="#ff4caf50" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dip">
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/repair_app_store" />
+                        <TextView android:textSize="13.0sp" android:textColor="@color/text_color_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/repair_app_store_desc" />
+                    </LinearLayout>
+                    <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_arrow_right" app:tint="@color/text_color_subtitle" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip">
+                <com.google.android.material.card.MaterialCardView android:id="@id/disableOtaBtn" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="6.0dip" style="@style/HelperCardStyle">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:background="@drawable/icon_circle_bg" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_disable_ota" android:backgroundTint="@color/helper_icon_bg_red" app:tint="#fff44336" />
+                        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/disable_ota" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/text_color_subtitle" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/disable_ota_short" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView android:id="@id/enableOtaBtn" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="6.0dip" style="@style/HelperCardStyle">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:background="@drawable/icon_circle_bg" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_enable_ota" android:backgroundTint="@color/helper_icon_bg_green" app:tint="#ff4caf50" />
+                        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/enable_ota" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/text_color_subtitle" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/enable_ota_short" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+            <com.google.android.material.card.MaterialCardView android:id="@id/rebootBtn" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/HelperCardStyle">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:background="@drawable/icon_circle_bg" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/reboot_btn" android:backgroundTint="@color/helper_icon_bg_deep_orange" app:tint="#ffff5722" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dip">
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reboot_head_unit" />
+                        <TextView android:textSize="13.0sp" android:textColor="@color/text_color_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/reboot_hint" />
+                    </LinearLayout>
+                    <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_arrow_right" app:tint="@color/text_color_subtitle" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

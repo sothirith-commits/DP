@@ -1,0 +1,38 @@
+.class public Lcom/incall/serversdk/mediascanner/Constant$MediaScanStatus;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/incall/serversdk/mediascanner/Constant;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "MediaScanStatus"
+.end annotation
+
+
+# static fields
+.field public static final ANALYSISING:I = 0x4
+
+.field public static final FINISH:I = 0x5
+
+.field public static final FIRST_SCANED:I = 0x3
+
+.field public static final IDLE:I = 0x1
+
+.field public static final INVALID:I = 0x6
+
+.field public static final SCANNING:I = 0x2
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

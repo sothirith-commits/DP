@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="24.0sp" android:textColor="@color/text_hint_day" android:id="@id/summaryTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:lineSpacingExtra="6.0dip" />
+    <TextView android:textSize="28.0sp" android:textStyle="bold" android:textColor="@color/text_light_day" android:id="@id/wifiStatusTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" />
+    <TextView android:textSize="28.0sp" android:textStyle="bold" android:textColor="@color/text_light_day" android:id="@id/adbStatusTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" />
+    <TextView android:textSize="28.0sp" android:textStyle="bold" android:textColor="@color/text_light_day" android:id="@id/suStatusTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="32.0dip" />
+    <TextView android:textSize="28.0sp" android:textStyle="bold" android:textColor="@color/text_light_day" android:gravity="center" android:id="@id/openHelperBtn" android:background="@drawable/dialog_cancel_btn_bg_day" android:layout_width="fill_parent" android:layout_height="96.0dip" android:text="@string/magisk_precheck_open_helper" />
+</LinearLayout>

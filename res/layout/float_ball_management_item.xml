@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="20.0dip" app:cardElevation="6.0dip" app:strokeWidth="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iconIv" android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="200.0dip" android:scaleType="centerCrop" />
+            <ImageView android:layout_gravity="end|top" android:id="@id/checkboxIv" android:background="@drawable/checkbox_background" android:padding="6.0dip" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_margin="12.0dip" android:src="@drawable/ic_check_box_outline" app:tint="@android:color/white" />
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:layout_gravity="start|top" android:id="@id/gifBadge" android:background="@drawable/badge_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12.0dip" android:text="GIF" android:paddingHorizontal="8.0dip" android:paddingVertical="4.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:layout_gravity="start|top" android:id="@id/builtinBadge" android:background="@drawable/badge_background_builtin" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12.0dip" android:text="default" android:paddingHorizontal="8.0dip" android:paddingVertical="4.0dip" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="?android:textColorPrimary" android:ellipsize="end" android:id="@id/nameTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+            <TextView android:textSize="14.0sp" android:textColor="?android:textColorSecondary" android:ellipsize="end" android:id="@id/infoTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:maxLines="1" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+                <com.google.android.material.button.MaterialButton android:textSize="15.0sp" android:textColor="@android:color/white" android:id="@id/applyBtn" android:layout_width="0.0dip" android:layout_height="48.0dip" android:text="@string/float_ball_apply" android:layout_weight="1.0" app:backgroundTint="@color/main_day" app:cornerRadius="24.0dip" style="@style/Widget.Material3.Button" />
+                <com.google.android.material.button.MaterialButton android:textSize="15.0sp" android:textColor="@color/delete_red" android:id="@id/deleteBtn" android:layout_width="0.0dip" android:layout_height="48.0dip" android:text="@string/delete" android:layout_weight="1.0" android:layout_marginStart="12.0dip" app:cornerRadius="24.0dip" app:strokeColor="@color/delete_red" style="@style/Widget.Material3.Button.OutlinedButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/deepalNavigationCard" android:tag="layout/layout_deepal_navigation_settings_0" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_spacing"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0sp" android:textColor="@color/text_light_night" android:id="@id/deepalNavigationTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/deepal_navigation_settings_title" />
+    <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:id="@id/deepalNavigationModeTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/deepal_navigation_mode_title" />
+    <RadioGroup android:orientation="horizontal" android:id="@id/deepalNavModeRadioGroup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+        <RadioButton android:textSize="16.0sp" android:textColor="@color/text_light_night" android:id="@id/deepalNavSideRb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/deepal_navigation_side_mode" android:layout_marginEnd="16.0dip" app:buttonTint="@color/radio_btn_bg_tint" />
+        <RadioButton android:textSize="16.0sp" android:textColor="@color/text_light_night" android:id="@id/deepalNavBottomRb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/deepal_navigation_bottom_mode" app:buttonTint="@color/radio_btn_bg_tint" />
+    </RadioGroup>
+    <LinearLayout android:orientation="vertical" android:id="@id/deepalBottomNavSettingsContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:id="@id/deepalBottomNavCardModeBgTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bottom_nav_card_mode_bg_option_title" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/text_light_night" android:id="@id/deepalBottomNavCardModeBgHintTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/bottom_nav_card_mode_bg_hint" />
+            </LinearLayout>
+            <com.kyleduo.switchbutton.SwitchButton android:id="@id/deepalBottomNavCardModeBgSwitch" android:layout_width="80.0dip" android:layout_height="44.0dip" app:kswBackColor="@drawable/switch_btn_bg" app:kswThumbColor="@color/white" app:kswThumbMargin="8.0dip" app:kswThumbRangeRatio="2.3" />
+        </LinearLayout>
+        <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:id="@id/bottomNavBackgroundDisplayTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/bottom_nav_background_display_title" />
+        <RadioGroup android:orientation="horizontal" android:id="@id/bottomNavBackgroundRadioGroup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+            <RadioButton android:textSize="16.0sp" android:textColor="@color/text_light_night" android:id="@id/bottomNavBackgroundTransparentRb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bottom_nav_background_transparent" android:layout_marginEnd="16.0dip" app:buttonTint="@color/radio_btn_bg_tint" />
+            <RadioButton android:textSize="16.0sp" android:textColor="@color/text_light_night" android:id="@id/bottomNavBackgroundTranslucentRb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bottom_nav_background_translucent" android:layout_marginEnd="16.0dip" app:buttonTint="@color/radio_btn_bg_tint" />
+            <RadioButton android:textSize="16.0sp" android:textColor="@color/text_light_night" android:id="@id/bottomNavBackgroundBlurRb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bottom_nav_background_blur" app:buttonTint="@color/radio_btn_bg_tint" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

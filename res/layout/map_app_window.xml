@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/map_app_window_0" android:background="@color/map_bg_day" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/maskView" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@mipmap/map_app_window_bg_day" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+    <ImageView android:layout_gravity="center" android:id="@id/startMapBtn" android:layout_width="128.0dip" android:layout_height="128.0dip" android:src="@mipmap/map_ic" />
+</FrameLayout>

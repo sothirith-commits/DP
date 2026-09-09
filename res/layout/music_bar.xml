@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/music_bar_0" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.makeramen.roundedimageview.RoundedImageView android:id="@id/coverBackground" android:visibility="gone" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@mipmap/album_default_cover_night" app:riv_corner_radius="8.0dip" />
+    <com.makeramen.roundedimageview.RoundedImageView android:id="@id/coverIv" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@mipmap/album_default_cover_night" app:riv_corner_radius="8.0dip" />
+    <TextView android:id="@id/titleTv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ProgressBar android:id="@id/progressBar" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+        <ImageView android:id="@id/playBtn" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/music_bar_play_pause_btn_night" />
+        <ProgressBar android:id="@id/loadingPb" android:padding="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateTint="@color/icon_night" />
+    </FrameLayout>
+    <ImageView android:id="@id/nextSongBtn" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/music_bar_next_song_btn_night" />
+</LinearLayout>

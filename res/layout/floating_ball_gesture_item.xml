@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/gestureItemRoot" android:background="@drawable/action_item_bg_night" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:id="@id/gestureNameTv" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/text_hint_night" android:id="@id/gestureActionTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" />
+    <ImageView android:id="@id/gestureArrowIv" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/right_arrow_night" />
+</LinearLayout>

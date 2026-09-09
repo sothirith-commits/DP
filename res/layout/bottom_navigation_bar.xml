@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_gravity="bottom" android:id="@id/cardView" android:tag="layout/bottom_navigation_bar_0" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/transparent" app:cardCornerRadius="@dimen/window_radius" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_navigation_bar_height">
+        <eightbitlab.com.blurview.BlurView android:id="@id/blurView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.deepalhome.launcher.navigation.view.BottomNavGridHostView android:id="@id/gridHost" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="28.0dip" />
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

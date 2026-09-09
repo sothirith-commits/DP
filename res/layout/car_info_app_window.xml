@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/car_info_app_window_0" android:background="@color/bg_night_66" android:paddingTop="32.0dip" android:paddingBottom="16.0dip" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="24.0sp" android:textColor="@color/text_light_night" android:id="@id/totalResidualRangeTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hybrid_total_endurance" />
+        <TextView android:textSize="40.0sp" android:textStyle="bold" android:textColor="@color/text_light_night" android:id="@id/totalResidualRangeValueTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/value_zero" android:layout_marginStart="16.0dip" />
+        <TextView android:textSize="24.0sp" android:textColor="@color/text_light_night" android:id="@id/totalResidualRangeValueUnitTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kilometer" android:layout_marginStart="12.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/hybridRemainRangeContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+        <TextView android:textSize="24.0sp" android:textColor="@color/text_light_night" android:id="@id/totalSocResidualRangeValueTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/value_zero" />
+        <TextView android:textSize="24.0sp" android:textColor="@color/text_light_night" android:id="@id/totalSocResidualRangeUnitTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kilometer" android:layout_marginStart="8.0dip" />
+        <TextView android:textSize="24.0sp" android:textColor="@color/text_light_night" android:id="@id/totalOilResidualRangeValueTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/value_zero" android:layout_marginStart="72.0dip" />
+        <TextView android:textSize="24.0sp" android:textColor="@color/text_light_night" android:id="@id/totalOilResidualRangeUnitTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kilometer" android:layout_marginStart="8.0dip" />
+    </LinearLayout>
+    <TextView android:textSize="24.0sp" android:textColor="@color/text_light_night" android:id="@id/speedTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/speed_unit_kmh" />
+    <FrameLayout android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <FrameLayout android:layout_gravity="center" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/tireFrontLeftIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="99.0dip" android:src="@drawable/car_info_tires" android:layout_marginStart="-2.0dip" />
+            <ImageView android:layout_gravity="end" android:id="@id/tireFrontRightIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="99.0dip" android:src="@drawable/car_info_tires" android:layout_marginEnd="-2.0dip" />
+            <ImageView android:layout_gravity="bottom" android:id="@id/tireRearLeftIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="52.0dip" android:src="@drawable/car_info_tires" android:layout_marginStart="-2.0dip" />
+            <ImageView android:layout_gravity="end|bottom" android:id="@id/tireRearRightIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="52.0dip" android:src="@drawable/car_info_tires" android:layout_marginEnd="-2.0dip" />
+            <ImageView android:id="@id/carIv" android:layout_width="280.0dip" android:layout_height="560.0dip" android:src="@mipmap/car_info_car_body" android:scaleType="centerCrop" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="108.0dip" android:layout_marginStart="-104.0dip">
+                <TextView android:textSize="40.0sp" android:textStyle="bold" android:textColor="@color/text_light_night" android:id="@id/tirePressureFrontLeftValueTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/value_zero_decimal" />
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:id="@id/tirePressureFrontLeftUnitTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tires_pressure" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="end" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="108.0dip" android:layout_marginEnd="-104.0dip">
+                <TextView android:textSize="40.0sp" android:textStyle="bold" android:textColor="@color/text_light_night" android:id="@id/tirePressureFrontRightValueTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/value_zero_decimal" />
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:id="@id/tirePressureFrontRightUnitTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tires_pressure" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="52.0dip" android:layout_marginStart="-104.0dip">
+                <TextView android:textSize="40.0sp" android:textStyle="bold" android:textColor="@color/text_light_night" android:id="@id/tirePressureRearLeftValueTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/value_zero_decimal" />
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:id="@id/tirePressureRearLeftUnitTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tires_pressure" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="end|bottom" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="52.0dip" android:layout_marginEnd="-104.0dip">
+                <TextView android:textSize="40.0sp" android:textStyle="bold" android:textColor="@color/text_light_night" android:id="@id/tirePressureRearRightValueTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/value_zero_decimal" />
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:id="@id/tirePressureRearRightUnitTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tires_pressure" />
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

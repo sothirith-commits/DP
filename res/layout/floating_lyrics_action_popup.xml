@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/popupContainer" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="@dimen/dp_500" android:layout_height="wrap_content" android:weightSum="8.0" android:paddingStart="12.0dip" android:paddingEnd="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/opacityBtn" android:background="@drawable/floating_lyrics_close_btn_bg" android:padding="8.0dip" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/ic_opacity" android:alpha="0.7" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/colorBtn" android:background="@drawable/floating_lyrics_close_btn_bg" android:padding="8.0dip" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/ic_palette" android:alpha="0.7" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/fontDecreaseBtn" android:background="@drawable/floating_lyrics_close_btn_bg" android:padding="8.0dip" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/ic_font_size_decrease" android:alpha="0.7" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/fontIncreaseBtn" android:background="@drawable/floating_lyrics_close_btn_bg" android:padding="8.0dip" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/ic_font_size_increase" android:alpha="0.7" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/lyricAlignBtn" android:background="@drawable/floating_lyrics_close_btn_bg" android:padding="8.0dip" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/ic_text_align_right" android:alpha="0.7" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/pinBtn" android:background="@drawable/floating_lyrics_close_btn_bg" android:padding="8.0dip" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/ic_keep_off" android:alpha="0.7" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/lockBtn" android:background="@drawable/floating_lyrics_close_btn_bg" android:padding="8.0dip" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/ic_floating_unlock" android:alpha="0.7" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/closeBtn" android:background="@drawable/floating_lyrics_close_btn_bg" android:padding="8.0dip" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/ic_close" android:alpha="0.7" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/pip_app_window_0" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextureView android:id="@id/pipTexture" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/pipOverlay" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="32.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/pipOverlayText" android:background="@drawable/pip_popup_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Click to select application" android:paddingHorizontal="36.0dip" android:paddingVertical="18.0dip" />
+    </FrameLayout>
+</FrameLayout>

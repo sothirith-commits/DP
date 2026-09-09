@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/itemRoot" android:tag="layout/item_accessibility_service_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip" android:paddingVertical="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iconIv" android:layout_width="48.0dip" android:layout_height="48.0dip" android:contentDescription="@null" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="12.0dip">
+        <TextView android:textSize="20.0sp" android:textColor="@color/text_light_day" android:ellipsize="end" android:id="@id/nameTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/text_hint_day" android:ellipsize="end" android:id="@id/descTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="2" />
+    </LinearLayout>
+    <com.kyleduo.switchbutton.SwitchButton android:id="@id/serviceSwitch" android:layout_width="70.0dip" android:layout_height="38.0dip" android:layout_marginStart="8.0dip" app:kswBackColor="@drawable/switch_btn_bg" app:kswThumbColor="@color/white" app:kswThumbMargin="6.0dip" app:kswThumbRangeRatio="2.3" />
+</LinearLayout>

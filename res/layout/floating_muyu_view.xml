@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/muyuRoot" android:layout_width="120.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/muyuIcon" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_muyu" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@string/muyu" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/muyuMeritTv" android:background="@drawable/muyu_merit_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:paddingHorizontal="12.0dip" android:paddingVertical="4.0dip" />
+    </LinearLayout>
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffffd700" android:layout_gravity="center" android:id="@id/muyuMeritPlusTv" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/muyu_merit_plus_one" />
+</FrameLayout>

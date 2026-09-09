@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eightbitlab.com.blurview.BlurView android:id="@id/blurView" android:tag="layout/app_center_view_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/appCenterContainer" android:paddingTop="@dimen/status_bar_height" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/headerContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="128.0dip">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/tabHeaderContainer" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/appsTab" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0.0dip" android:paddingHorizontal="@dimen/dp_20" android:paddingVertical="@dimen/dp_8">
+                    <TextView android:textColor="@android:color/white" android:id="@id/appsTabLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_apps" style="@style/AppCenterTabText" />
+                    <View android:layout_gravity="center_horizontal" android:id="@id/appsTabIndicator" android:background="@drawable/app_center_tab_indicator_bg" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="@dimen/dp_4" android:layout_marginTop="@dimen/dp_8" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/systemAppsTab" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0.0dip" android:paddingHorizontal="@dimen/dp_20" android:paddingVertical="@dimen/dp_8">
+                    <TextView android:textColor="@android:color/white" android:id="@id/systemAppsTabLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/system_apps" style="@style/AppCenterTabText" />
+                    <View android:layout_gravity="center_horizontal" android:id="@id/systemAppsTabIndicator" android:background="@drawable/app_center_tab_indicator_bg" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="@dimen/dp_4" android:layout_marginTop="@dimen/dp_8" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/functionsTab" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0.0dip" android:paddingHorizontal="@dimen/dp_20" android:paddingVertical="@dimen/dp_8">
+                    <TextView android:textColor="@android:color/white" android:id="@id/functionsTabLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all_functions" style="@style/AppCenterTabText" />
+                    <View android:layout_gravity="center_horizontal" android:id="@id/functionsTabIndicator" android:background="@drawable/app_center_tab_indicator_bg" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="@dimen/dp_4" android:layout_marginTop="@dimen/dp_8" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:id="@id/activeTabIndicator" android:background="@drawable/app_center_tab_indicator_bg" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="@dimen/dp_4" />
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="end|center" android:orientation="horizontal" android:id="@id/editActionContainer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:buttonBarStyle">
+                <Button android:textSize="24.0sp" android:textColor="@android:color/white" android:id="@id/editCancelBtn" android:background="@drawable/dialog_ok_btn_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0.0dip" android:minHeight="0.0dip" android:text="@string/dialog_cancel" android:backgroundTint="@null" android:paddingHorizontal="24.0dip" android:paddingVertical="10.0dip" />
+                <Button android:textSize="24.0sp" android:textColor="@android:color/white" android:id="@id/editDoneBtn" android:background="@drawable/dialog_ok_btn_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0.0dip" android:minHeight="0.0dip" android:text="@string/done" android:layout_marginStart="24.0dip" android:backgroundTint="@null" android:paddingHorizontal="24.0dip" android:paddingVertical="10.0dip" />
+            </LinearLayout>
+            <Button android:textSize="24.0sp" android:layout_gravity="end|center" android:id="@id/shortcutEditBtn" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edit_shortcuts" />
+        </FrameLayout>
+        <androidx.viewpager2.widget.ViewPager2 android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="12.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</eightbitlab.com.blurview.BlurView>

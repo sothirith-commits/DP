@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/range_widget_view_0" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <eightbitlab.com.blurview.BlurView android:id="@id/blurView" android:background="@drawable/time_weather_widget_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" app:blurOverlayColor="@color/white_60_transparent" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/contentContainer" android:paddingTop="22.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="22.0dip" android:paddingEnd="22.0dip">
+        <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/summaryContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:baselineAligned="false" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <TextView android:textSize="15.0sp" android:id="@id/summaryLabelTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="11.0dip" android:text="@string/range_widget_total_remaining" android:includeFontPadding="false" />
+            <TextView android:textSize="62.0sp" android:textStyle="bold" android:id="@id/totalRangeValueTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/value_zero" android:includeFontPadding="false" android:layout_marginStart="12.0dip" android:letterSpacing="-0.07" />
+            <TextView android:textSize="18.0sp" android:textStyle="bold" android:id="@id/summaryUnitTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/kilometer" android:includeFontPadding="false" android:layout_marginStart="12.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/metricsContainer" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/summaryContainer">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/electricMetricContainer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:id="@id/electricMetricIconContainer" android:background="@drawable/range_widget_metric_icon_bg" android:layout_width="50.0dip" android:layout_height="50.0dip">
+                    <ImageView android:layout_gravity="center" android:id="@id/electricMetricIconIv" android:layout_width="26.0dip" android:layout_height="26.0dip" android:src="@drawable/ic_range_widget_battery" />
+                </FrameLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="10.0dip">
+                    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+                        <TextView android:textSize="15.0sp" android:id="@id/electricMetricNameTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/range_widget_electric_range" android:includeFontPadding="false" />
+                        <Space android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+                        <TextView android:textSize="19.0sp" android:textStyle="bold" android:id="@id/electricMetricPercentTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" android:includeFontPadding="false" />
+                        <TextView android:textSize="15.0sp" android:id="@id/electricMetricRangeTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 km" android:includeFontPadding="false" android:layout_marginStart="12.0dip" />
+                    </LinearLayout>
+                    <ProgressBar android:id="@id/electricMetricProgressPb" android:layout_width="fill_parent" android:layout_height="12.0dip" android:layout_marginTop="5.0dip" android:maxHeight="12.0dip" android:max="100" android:progress="0" android:progressDrawable="@drawable/range_widget_progress_electric" android:minHeight="12.0dip" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/fuelMetricContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip">
+                <FrameLayout android:id="@id/fuelMetricIconContainer" android:background="@drawable/range_widget_metric_icon_bg" android:layout_width="50.0dip" android:layout_height="50.0dip">
+                    <ImageView android:layout_gravity="center" android:id="@id/fuelMetricIconIv" android:layout_width="26.0dip" android:layout_height="26.0dip" android:src="@drawable/ic_range_widget_fuel" />
+                </FrameLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="10.0dip">
+                    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+                        <TextView android:textSize="15.0sp" android:id="@id/fuelMetricNameTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/range_widget_fuel_range" android:includeFontPadding="false" />
+                        <Space android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+                        <TextView android:textSize="19.0sp" android:textStyle="bold" android:id="@id/fuelMetricPercentTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" android:includeFontPadding="false" />
+                        <TextView android:textSize="15.0sp" android:id="@id/fuelMetricRangeTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 km" android:includeFontPadding="false" android:layout_marginStart="12.0dip" />
+                    </LinearLayout>
+                    <ProgressBar android:id="@id/fuelMetricProgressPb" android:layout_width="fill_parent" android:layout_height="12.0dip" android:layout_marginTop="5.0dip" android:maxHeight="12.0dip" android:max="100" android:progress="0" android:progressDrawable="@drawable/range_widget_progress_fuel" android:minHeight="12.0dip" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

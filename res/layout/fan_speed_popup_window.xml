@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/fan_speed_popup_window_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="start|bottom" android:id="@id/popupContainer" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/popupContentContainer" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="10.0dip" android:paddingVertical="12.0dip">
+            <ImageView android:id="@id/leftFanIcon" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/ic_climate_fan_speed" />
+            <SeekBar android:id="@id/fanSpeedSeekBar" android:layout_width="170.0dip" android:layout_height="28.0dip" android:max="8" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" android:splitTrack="false" android:layout_marginHorizontal="5.0dip" />
+            <ImageView android:id="@id/rightFanIcon" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/ic_climate_fan_speed" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

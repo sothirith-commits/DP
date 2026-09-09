@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Transfer</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #2c9678 0%, #428675 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 24px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+        .tab-container {
+            display: flex;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        .tab-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            background: #f5f5f5;
+            color: #666;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .tab-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .tab-btn:not(.active):hover {
+            background: #e8e8e8;
+        }
+        .token-section {
+            margin-bottom: 20px;
+            padding: 16px;
+            background: #f8f9ff;
+            border-radius: 12px;
+            border: 1px solid #e0e6ff;
+        }
+        .token-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .token-input {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: 8px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .token-input:focus {
+            border-color: #667eea;
+        }
+        .token-input.error {
+            border-color: #dc3545;
+            animation: shake 0.5s;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        .token-hint {
+            font-size: 12px;
+            color: #999;
+            margin-top: 8px;
+            text-align: center;
+        }
+        .upload-area {
+            border: 2px dashed #ddd;
+            border-radius: 12px;
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+        .upload-area:hover, .upload-area.dragover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+        .upload-area.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        .upload-area svg {
+            width: 48px;
+            height: 48px;
+            color: #999;
+            margin-bottom: 12px;
+        }
+        .upload-area p {
+            color: #666;
+            font-size: 14px;
+        }
+        .upload-area .hint {
+            color: #999;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+        .size-limit {
+            color: #e67e22;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+        input[type="file"] { display: none; }
+        .file-list {
+            max-height: 200px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+        .file-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .file-item img {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .file-thumb {
+            width: 48px;
+            height: 48px;
+            border-radius: 4px;
+            margin-right: 12px;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 12px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        .file-info { flex: 1; }
+        .file-name {
+            font-size: 14px;
+            color: #333;
+            word-break: break-all;
+        }
+        .file-size {
+            font-size: 12px;
+            color: #999;
+        }
+        .file-status {
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        .file-status.pending { background: #fff3cd; color: #856404; }
+        .file-status.uploading { background: #cce5ff; color: #004085; }
+        .file-status.success { background: #d4edda; color: #155724; }
+        .file-status.error { background: #f8d7da; color: #721c24; }
+        .file-status.too-large { background: #f8d7da; color: #721c24; }
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-primary:hover { opacity: 0.9; }
+        .btn-primary:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .progress-bar {
+            height: 4px;
+            background: #eee;
+            border-radius: 2px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+        .progress-bar .progress {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="pageTitle">Wallpaper Transfer</h1>
+        <p class="subtitle" id="pageSubtitle">Select images to upload to the head unit</p>
+
+        <div class="tab-container">
+            <button class="tab-btn active" id="wallpaperTab" onclick="switchTab('wallpaper')">Wallpaper</button>
+            <button class="tab-btn" id="iconTab" onclick="switchTab('icon')">Floating Ball Icon</button>
+        </div>
+
+        <div class="token-section">
+            <label class="token-label">Enter the verification code shown on the head unit</label>
+            <input type="text" class="token-input" id="tokenInput" maxlength="4" placeholder="0000" inputmode="numeric" pattern="[0-9]*">
+            <p class="token-hint">Verification code is displayed on the head unit transfer screen</p>
+        </div>
+
+        <div class="upload-area disabled" id="uploadArea">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+            <p id="uploadHint">Click to select images or videos</p>
+            <p class="hint" id="formatHint">Supports JPG, PNG, WebP, GIF, BMP, HEIC, MP4, M4V, MOV</p>
+            <p class="size-limit" id="sizeHint">Max 300MB per file</p>
+        </div>
+        <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.webp,.gif,.bmp,.heic,.heif,.mp4,.m4v,.mov" multiple>
+
+        <div class="file-list" id="fileList"></div>
+
+        <button class="btn btn-primary" id="uploadBtn" disabled>Upload Wallpaper</button>
+    </div>
+
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const tokenInput = document.getElementById('tokenInput');
+        const pageTitle = document.getElementById('pageTitle');
+        const pageSubtitle = document.getElementById('pageSubtitle');
+        const uploadHint = document.getElementById('uploadHint');
+        const formatHint = document.getElementById('formatHint');
+        const sizeHint = document.getElementById('sizeHint');
+        const wallpaperTab = document.getElementById('wallpaperTab');
+        const iconTab = document.getElementById('iconTab');
+
+        let files = [];
+        let authToken = '';
+        let tokenVerified = false;
+        let currentMode = 'wallpaper';
+
+        const WALLPAPER_MAX_FILE_SIZE = 300 * 1024 * 1024;
+        const ICON_MAX_FILE_SIZE = 10 * 1024 * 1024;
+        const objectURLCache = new Map();
+
+        const wallpaperExtensions = ['jpg', 'jpeg', 'png', 'webp', 'gif', 'bmp', 'heic', 'heif', 'mp4', 'm4v', 'mov'];
+        const iconExtensions = ['jpg', 'jpeg', 'png', 'webp', 'gif', 'bmp'];
+        const videoExtensions = ['mp4', 'm4v', 'mov'];
+        const mimeToExtension = {
+            'image/jpeg': 'jpg',
+            'image/jpg': 'jpg',
+            'image/png': 'png',
+            'image/webp': 'webp',
+            'image/gif': 'gif',
+            'image/bmp': 'bmp',
+            'image/heic': 'heic',
+            'image/heif': 'heif',
+            'video/mp4': 'mp4',
+            'video/m4v': 'm4v',
+            'video/x-m4v': 'm4v',
+            'video/quicktime': 'mov'
+        };
+
+        function switchTab(mode) {
+            currentMode = mode;
+            files = [];
+            renderFileList();
+
+            if (mode === 'wallpaper') {
+                wallpaperTab.classList.add('active');
+                iconTab.classList.remove('active');
+                pageTitle.textContent = 'Wallpaper Transfer';
+                pageSubtitle.textContent = 'Select images to upload to the head unit';
+                uploadHint.textContent = 'Click to select images or videos';
+                formatHint.textContent = 'Supports JPG, PNG, WebP, GIF, BMP, HEIC, MP4, M4V, MOV';
+                sizeHint.textContent = 'Max 300MB per file';
+                uploadBtn.textContent = 'Upload Wallpaper';
+                fileInput.accept = '.jpg,.jpeg,.png,.webp,.gif,.bmp,.heic,.heif,.mp4,.m4v,.mov';
+            } else {
+                iconTab.classList.add('active');
+                wallpaperTab.classList.remove('active');
+                pageTitle.textContent = 'Icon Transfer';
+                pageSubtitle.textContent = 'Select icons to upload to the floating ball';
+                uploadHint.textContent = 'Click to select icons';
+                formatHint.textContent = 'Supports JPG, PNG, WebP, GIF, BMP';
+                sizeHint.textContent = 'Max 10MB per file';
+                uploadBtn.textContent = 'Upload Icon';
+                fileInput.accept = '.jpg,.jpeg,.png,.webp,.gif,.bmp';
+            }
+            updateUploadButton();
+        }
+
+        function getObjectURL(file) {
+            if (!objectURLCache.has(file)) {
+                objectURLCache.set(file, URL.createObjectURL(file));
+            }
+            return objectURLCache.get(file);
+        }
+
+        function getValidExtensions() {
+            return currentMode === 'wallpaper' ? wallpaperExtensions : iconExtensions;
+        }
+
+        function getMaxFileSize() {
+            return currentMode === 'wallpaper' ? WALLPAPER_MAX_FILE_SIZE : ICON_MAX_FILE_SIZE;
+        }
+
+        function getMaxFileSizeText() {
+            return currentMode === 'wallpaper' ? '300MB' : '10MB';
+        }
+
+        function getUploadEndpoint() {
+            return currentMode === 'wallpaper' ? '/wallpapers' : '/icons';
+        }
+
+        function getFileExtension(name) {
+            if (!name) return '';
+            const idx = name.lastIndexOf('.');
+            if (idx <= 0 || idx === name.length - 1) return '';
+            return name.slice(idx + 1).toLowerCase();
+        }
+
+        function getBaseName(name) {
+            if (!name) return currentMode === 'wallpaper' ? 'wallpaper' : 'icon';
+            const idx = name.lastIndexOf('.');
+            return idx > 0 ? name.slice(0, idx) : name;
+        }
+
+        function getMimeExtension(file) {
+            const type = (file.type || '').toLowerCase();
+            return mimeToExtension[type] || '';
+        }
+
+        function buildSafeFileName(file) {
+            const defaultName = currentMode === 'wallpaper' ? 'wallpaper' : 'icon';
+            const name = file.name || defaultName;
+            const ext = getFileExtension(name);
+            if (getValidExtensions().includes(ext)) return name;
+            const mimeExt = getMimeExtension(file);
+            const base = getBaseName(name).replace(/^\.+/, '') || defaultName;
+            return mimeExt ? `${base}.${mimeExt}` : name;
+        }
+
+        function isValidFile(file) {
+            const ext = getFileExtension(file.name);
+            if (getValidExtensions().includes(ext)) return true;
+            const mimeExt = getMimeExtension(file);
+            return getValidExtensions().includes(mimeExt);
+        }
+
+        function isVideoFile(file) {
+            const ext = getFileExtension(file.name);
+            if (videoExtensions.includes(ext)) return true;
+            const mimeExt = getMimeExtension(file);
+            return videoExtensions.includes(mimeExt);
+        }
+
+        function isFileTooLarge(file) {
+            return file.size > getMaxFileSize();
+        }
+
+        tokenInput.addEventListener('input', (e) => {
+            const value = e.target.value.replace(/\D/g, '');
+            e.target.value = value;
+            authToken = value;
+            tokenVerified = false;
+            tokenInput.classList.remove('error');
+            uploadArea.classList.add('disabled');
+
+            if (value.length === 4) {
+                verifyToken(value);
+            }
+            updateUploadButton();
+        });
+
+        async function verifyToken(token) {
+            try {
+                const response = await fetch('/verify-token', {
+                    method: 'POST',
+                    headers: { 'X-Auth-Token': token }
+                });
+                if (response.ok) {
+                    tokenVerified = true;
+                    uploadArea.classList.remove('disabled');
+                    tokenInput.classList.remove('error');
+                } else {
+                    tokenVerified = false;
+                    tokenInput.classList.add('error');
+                    uploadArea.classList.add('disabled');
+                }
+            } catch (e) {
+                tokenVerified = false;
+                tokenInput.classList.add('error');
+                uploadArea.classList.add('disabled');
+            }
+            updateUploadButton();
+        }
+
+        function updateUploadButton() {
+            const hasPendingFiles = files.some(f => f.status === 'pending');
+            uploadBtn.disabled = !tokenVerified || !hasPendingFiles;
+        }
+
+        uploadArea.addEventListener('click', () => {
+            if (!uploadArea.classList.contains('disabled')) {
+                fileInput.click();
+            }
+        });
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            if (!uploadArea.classList.contains('disabled')) {
+                uploadArea.classList.add('dragover');
+            }
+        });
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            if (!uploadArea.classList.contains('disabled')) {
+                handleFiles(e.dataTransfer.files);
+            }
+        });
+        fileInput.addEventListener('change', () => {
+            handleFiles(fileInput.files);
+        });
+
+        function handleFiles(newFiles) {
+            let invalidCount = 0;
+            let tooLargeCount = 0;
+            for (let file of newFiles) {
+                if (!isValidFile(file)) {
+                    invalidCount++;
+                    continue;
+                }
+                if (isFileTooLarge(file)) {
+                    files.push({ file, status: 'too-large', safeName: buildSafeFileName(file) });
+                    tooLargeCount++;
+                    continue;
+                }
+                files.push({ file, status: 'pending', safeName: buildSafeFileName(file) });
+            }
+            if (invalidCount > 0) {
+                alert(`${invalidCount} file(s) skipped due to unsupported format`);
+            }
+            if (tooLargeCount > 0) {
+                alert(`${tooLargeCount} file(s) exceed the ${getMaxFileSizeText()} limit`);
+            }
+            renderFileList();
+            updateUploadButton();
+        }
+
+        function renderFileList() {
+            fileList.innerHTML = files.map((item, index) => `
+                <div class="file-item" id="file-${index}">
+                    ${renderFilePreview(item.file)}
+                    <div class="file-info">
+                        <div class="file-name">${item.safeName || item.file.name}</div>
+                        <div class="file-size">${formatSize(item.file.size)}</div>
+                        ${item.status === 'uploading' ? '<div class="progress-bar"><div class="progress" style="width: 0%"></div></div>' : ''}
+                    </div>
+                    <span class="file-status ${item.status}">${getStatusText(item.status)}</span>
+                </div>
+            `).join('');
+        }
+
+        function renderFilePreview(file) {
+            if (isVideoFile(file)) {
+                const ext = getFileExtension(file.name) || getMimeExtension(file);
+                return `<div class="file-thumb">${(ext || 'VIDEO').toUpperCase()}</div>`;
+            }
+            return `<img src="${getObjectURL(file)}" alt="">`;
+        }
+
+        function formatSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / 1024 / 1024).toFixed(1) + ' MB';
+        }
+
+        function getStatusText(status) {
+            const texts = {
+                pending: 'Pending',
+                uploading: 'Uploading',
+                success: 'Success',
+                error: 'Failed',
+                'too-large': 'Too Large'
+            };
+            return texts[status] || status;
+        }
+
+        let isUploading = false;
+        window.addEventListener('beforeunload', (e) => {
+            if (isUploading) {
+                e.preventDefault();
+                e.returnValue = 'Files are being uploaded. Are you sure you want to leave?';
+                return e.returnValue;
+            }
+        });
+
+        uploadBtn.addEventListener('click', async () => {
+            uploadBtn.disabled = true;
+            isUploading = true;
+            for (let i = 0; i < files.length; i++) {
+                if (files[i].status !== 'pending') continue;
+                files[i].status = 'uploading';
+                renderFileList();
+                try {
+                    await uploadFile(files[i], i);
+                    files[i].status = 'success';
+                } catch (e) {
+                    files[i].status = 'error';
+                    if (e.message === 'Invalid token') {
+                        tokenInput.classList.add('error');
+                        tokenInput.focus();
+                        alert('Invalid verification code, please check and try again');
+                        break;
+                    }
+                }
+                renderFileList();
+            }
+            isUploading = false;
+            updateUploadButton();
+        });
+
+        async function uploadFile(item, index) {
+            const file = item.file;
+            const safeName = item.safeName || buildSafeFileName(file);
+            const formData = new FormData();
+            formData.append('fileName', encodeURIComponent(safeName));
+            formData.append('file', file, safeName);
+
+            return new Promise((resolve, reject) => {
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', getUploadEndpoint());
+                xhr.setRequestHeader('X-Auth-Token', authToken);
+                xhr.upload.onprogress = (e) => {
+                    if (e.lengthComputable) {
+                        const percent = (e.loaded / e.total) * 100;
+                        const progressBar = document.querySelector(`#file-${index} .progress`);
+                        if (progressBar) progressBar.style.width = percent + '%';
+                    }
+                };
+                xhr.onload = () => {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        resolve();
+                    } else if (xhr.status === 401) {
+                        reject(new Error('Invalid token'));
+                    } else if (xhr.status === 413) {
+                        reject(new Error('File too large'));
+                    } else {
+                        reject(new Error(xhr.statusText));
+                    }
+                };
+                xhr.onerror = () => reject(new Error('Network error'));
+                xhr.send(formData);
+            });
+        }
+    </script>
+</body>
+</html>

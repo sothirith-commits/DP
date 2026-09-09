@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/mode_widgets_view_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_24dp" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.deepalhome.launcher.widget.EnergyModeWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="144.0dip" />
+    <com.deepalhome.launcher.widget.DriveModeWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="144.0dip" />
+    <com.deepalhome.launcher.widget.AirConditionModeWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="144.0dip" />
+</LinearLayout>

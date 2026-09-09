@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/image_widget_view_0" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.deepalhome.launcher.view.RoundedFrameLayout android:id="@id/contentContainer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/imageIv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:contentDescription="@null" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/placeholderContainer" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/placeholderIconIv" android:layout_width="56.0dip" android:layout_height="56.0dip" android:src="@drawable/ic_widget_image_placeholder" android:contentDescription="@null" />
+            <TextView android:textSize="16.0sp" android:id="@id/placeholderTextTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" />
+        </LinearLayout>
+    </com.deepalhome.launcher.view.RoundedFrameLayout>
+</FrameLayout>

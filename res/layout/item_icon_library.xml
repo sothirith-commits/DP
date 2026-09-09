@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/itemRoot" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:id="@id/cardView" android:layout_width="0.0dip" android:layout_height="0.0dip" android:foreground="?android:selectableItemBackground" app:cardBackgroundColor="#fff5f5f5" app:cardCornerRadius="8.0dip" app:cardElevation="0.0dip" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:id="@id/iconIv" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerInside" />
+    </androidx.cardview.widget.CardView>
+    <ImageView android:id="@id/currentIndicator" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/ic_check_circle" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="8.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/gifBadge" android:background="@drawable/badge_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="GIF" android:layout_marginEnd="2.0dip" android:paddingHorizontal="3.0dip" android:paddingVertical="1.0dip" app:layout_constraintBottom_toBottomOf="@id/cardView" app:layout_constraintEnd_toEndOf="@id/cardView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

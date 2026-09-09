@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:tag="layout/weather_forecast_widget_item_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="8.0dip" android:paddingVertical="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/text_light_day" android:ellipsize="end" android:gravity="center" android:id="@id/dateTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" />
+    <ImageView android:id="@id/weatherIv" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginTop="22.0dip" android:src="@mipmap/weather_clear_day" />
+    <TextView android:textSize="30.0sp" android:textStyle="bold" android:textColor="@color/text_light_day" android:ellipsize="end" android:gravity="center" android:id="@id/temperatureTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:maxLines="1" android:includeFontPadding="false" />
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/text_light_day" android:ellipsize="end" android:gravity="center" android:id="@id/weatherTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="1" android:includeFontPadding="false" android:autoSizeTextType="uniform" android:autoSizeStepGranularity="1.0sp" android:autoSizeMinTextSize="14.0sp" android:autoSizeMaxTextSize="18.0sp" />
+</LinearLayout>

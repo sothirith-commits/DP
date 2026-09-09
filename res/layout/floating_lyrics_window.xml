@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/contentContainer" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <eightbitlab.com.blurview.BlurView android:id="@id/blurView" android:layout_width="fill_parent" android:layout_height="fill_parent" app:blurOverlayColor="@color/floating_lyrics_blur_overlay_night" />
+    <LinearLayout android:orientation="vertical" android:id="@id/mainContent" android:paddingTop="16.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="20.0dip" android:paddingEnd="20.0dip">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/titleContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:paddingStart="40.0dip" android:paddingEnd="40.0dip">
+            <TextView android:textSize="28.0sp" android:textStyle="bold" android:textColor="@color/floating_lyrics_title_color_night" android:ellipsize="marquee" android:id="@id/titleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="400.0dip" android:text="@string/unknown_song" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" />
+            <TextView android:textSize="28.0sp" android:textColor="@color/floating_lyrics_singer_color_night" android:id="@id/separatorTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/middle_dot" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+            <TextView android:textSize="28.0sp" android:textColor="@color/floating_lyrics_singer_color_night" android:ellipsize="marquee" android:id="@id/singerTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="400.0dip" android:text="@string/unknown_singer" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" />
+        </LinearLayout>
+        <com.bosphere.fadingedgelayout.FadingEdgeLayout android:id="@id/lrcViewContainer" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:fel_edge="top|bottom" app:fel_size_bottom="24.0dip" app:fel_size_top="24.0dip">
+            <me.wcy.lrcview.LrcView android:id="@id/lrcView" android:paddingTop="@dimen/dp_8" android:layout_width="fill_parent" android:layout_height="fill_parent" app:lrcBoldEnabled="true" app:lrcCurrentTextColor="@color/text_light_night" app:lrcDividerHeight="@dimen/dp_24" app:lrcLabel="@string/lyric_loading" app:lrcNormalTextColor="@color/floating_lyrics_normal_text_night" app:lrcNormalTextSize="20.0sp" app:lrcTextGravity="center" app:lrcTextSize="24.0sp" />
+            <com.deepalhome.launcher.music.ttml.TtmlLyricView android:id="@id/ttmlView" android:paddingTop="@dimen/dp_8" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.bosphere.fadingedgelayout.FadingEdgeLayout>
+    </LinearLayout>
+    <View android:id="@id/dragHandle" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:layout_gravity="end|bottom" android:id="@id/resizeHandleBottomRight" android:padding="6.0dip" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_margin="4.0dip" android:src="@drawable/ic_resize_handle_night" android:alpha="0.5" />
+</FrameLayout>

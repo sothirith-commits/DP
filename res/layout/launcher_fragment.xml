@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/launcher_fragment_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/launcherView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.deepalhome.launcher.wallpaper.WallpaperView android:id="@id/wallpaperView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <eightbitlab.com.blurview.BlurView android:id="@id/editModeBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.deepalhome.launcher.widget.WidgetsView android:id="@id/widgetsView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="96.0dip" android:layout_marginBottom="12.0dip" android:layout_marginHorizontal="24.0dip" app:layout_constraintBottom_toTopOf="@id/navigationBar" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <FrameLayout android:id="@id/editModeContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="96.0dip" android:layout_marginBottom="112.0dip" android:layout_marginHorizontal="88.0dip">
+            <LinearLayout android:layout_gravity="center|bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
+                <LinearLayout android:gravity="center" android:id="@id/addWidgetBtn" android:background="@drawable/edit_mode_btn_bg" android:layout_width="360.0dip" android:layout_height="60.0dip" android:layout_marginHorizontal="32.0dip">
+                    <ImageView android:layout_gravity="end" android:padding="16.0dip" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/edit_mode_add_widget" />
+                    <TextView android:textSize="24.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_widget" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="end" android:id="@id/finishEditBtn" android:background="@drawable/edit_mode_btn_bg" android:padding="16.0dip" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/edi_mode_finish" />
+            </LinearLayout>
+        </FrameLayout>
+        <com.deepalhome.launcher.window.WindowsView android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/contentView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/fakeStatusBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@mipmap/fake_status_bar" />
+        <View android:layout_gravity="start|center" android:id="@id/navigationGestureBar" android:background="@drawable/navigation_bar_divider_night" android:focusable="true" android:clickable="true" android:layout_width="6.0dip" android:layout_height="96.0dip" android:alpha="0.6" android:layout_marginStart="8.0dip" />
+        <com.deepalhome.launcher.navigation.NavigationBar android:layout_gravity="start" android:id="@id/navigationBar" android:visibility="gone" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:translationX="-200.0dip" />
+        <com.deepalhome.launcher.navigation.BottomNavigationBar android:layout_gravity="bottom" android:id="@id/bottomNavigationBar" android:visibility="gone" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+</FrameLayout>

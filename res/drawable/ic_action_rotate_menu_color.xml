@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="12.0dip" />
+            <size android:height="42.0dip" android:width="42.0dip" />
+            <gradient android:startColor="#ff42a5f5" android:endColor="#ff80deea" android:angle="315.0" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:height="22.0dip" android:width="22.0dip" android:drawable="@drawable/ic_widget_shuffle_white" />
+</layer-list>

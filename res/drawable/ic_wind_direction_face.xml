@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="84.0dip" android:width="84.0dip" android:viewportWidth="84.0" android:viewportHeight="84.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#00000000" android:pathData="M70,21m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0" android:strokeColor="@color/wind_direction_icon_base" android:strokeWidth="4.0" android:fillType="evenOdd" />
+    <path android:fillColor="#00000000" android:pathData="M52,46C49.303,46 46.605,46 43.908,46C42.071,46 40.336,46.841 39.198,48.282L28.498,61.836C27.31,63.34 27.567,65.523 29.071,66.711C29.207,66.818 29.35,66.914 29.5,67C31.51,68.149 34.059,67.65 35.489,65.829L42.185,57.296C43.323,55.846 45.063,55 46.905,55L54.363,55C56.598,55 58.648,53.757 59.682,51.775L68.586,34.71C69.152,33.626 68.731,32.287 67.647,31.721C67.439,31.613 67.215,31.538 66.984,31.5C65.077,31.184 63.129,31.748 61.687,33.035L56.707,37.477C55.608,38.458 54.186,39 52.713,39L42.684,39L42.684,39" android:strokeColor="@color/wind_direction_icon_base" android:strokeWidth="4.0" android:strokeLineCap="round" android:fillType="evenOdd" />
+    <path android:fillColor="@color/climate_control_active" android:pathData="M52.417,20.086C51.877,19.97 51.346,20.313 51.23,20.853C51.185,21.061 51.207,21.276 51.294,21.47L52.719,24.671L44.223,28.454C43.34,28.847 42.943,29.881 43.336,30.764C43.729,31.647 44.764,32.044 45.647,31.651L59.308,25.569C59.812,25.344 60.039,24.753 59.815,24.248C59.724,24.044 59.567,23.876 59.369,23.772L52.417,20.086Z" android:fillType="evenOdd" />
+</vector>

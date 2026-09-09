@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/wallpaper_view_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/wallpaperBlurRoot" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/wallpaperImageContainer" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/wallpaperIv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            <ImageView android:id="@id/wallpaperNextIv" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:alpha="0.0" />
+            <View android:id="@id/wallpaperTransitionShadowView" android:background="@drawable/wallpaper_transition_shadow" android:visibility="gone" android:layout_width="56.0dip" android:layout_height="fill_parent" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/wallpaperVideoContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextureView android:layout_gravity="center" android:id="@id/wallpaperVideoView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </FrameLayout>
+    <View android:id="@id/nightMaskView" android:background="#33000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

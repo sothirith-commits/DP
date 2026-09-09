@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/ble_device_card_0" android:background="@drawable/settings_section_bg_day" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="18.0sp" android:textColor="@color/text_light_day" android:id="@id/deviceNameTv" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text_hint_day" android:id="@id/batteryTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+        </LinearLayout>
+        <View android:id="@id/statusIndicator" android:background="@android:color/holo_green_light" android:layout_width="12.0dip" android:layout_height="12.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/eventsContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+        <TextView android:textSize="13.0sp" android:textColor="@color/text_hint_day" android:id="@id/clickEventTv" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/text_hint_day" android:id="@id/doubleClickEventTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/text_hint_day" android:id="@id/longPressEventTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/text_hint_day" android:id="@id/rotateEventTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="end" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+        <Button android:textSize="14.0sp" android:id="@id/configBtn" android:layout_width="wrap_content" android:layout_height="44.0dip" android:text="@string/ble_configure" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:backgroundTint="@color/accent" app:cornerRadius="32.0dip" style="@style/Widget.App.Button.White" />
+        <Button android:textSize="14.0sp" android:id="@id/deleteBtn" android:layout_width="wrap_content" android:layout_height="44.0dip" android:text="@string/delete" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" android:layout_marginStart="12.0dip" app:backgroundTint="@color/delete_red" app:cornerRadius="32.0dip" style="@style/Widget.App.Button.White" />
+    </LinearLayout>
+</LinearLayout>

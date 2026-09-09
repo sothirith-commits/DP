@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/mi_temp_widget_view_0" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <eightbitlab.com.blurview.BlurView android:id="@id/blurView" android:background="@drawable/time_weather_widget_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" app:blurOverlayColor="@color/white_60_transparent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/contentContainer" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/topRow" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/batteryChip" android:paddingTop="7.0dip" android:paddingBottom="7.0dip" android:focusable="false" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="28.0dip" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="@color/text_hint_day" android:id="@id/batteryValueTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+            </LinearLayout>
+            <Space android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/statusWrap" android:paddingTop="7.0dip" android:paddingBottom="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="28.0dip" android:paddingStart="2.0dip">
+                <View android:id="@id/statusDotView" android:layout_width="7.0dip" android:layout_height="7.0dip" />
+                <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="@color/text_hint_day" android:ellipsize="end" android:id="@id/updatedTextTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_marginStart="6.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/contentRow" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="10.0dip" android:layout_weight="1.0">
+            <FrameLayout android:id="@id/tempCard" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginEnd="8.0dip">
+                <LinearLayout android:gravity="bottom" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="54.0sp" android:textStyle="bold" android:textColor="@color/text_light_day" android:id="@id/temperatureValueTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:letterSpacing="-0.07" />
+                    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/text_hint_day" android:id="@id/temperatureUnitTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="℃" android:includeFontPadding="false" android:layout_marginStart="6.0dip" />
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:id="@id/humidityCard" android:layout_width="88.0dip" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="bottom" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="30.0sp" android:textStyle="bold" android:textColor="@color/text_light_day" android:id="@id/humidityValueTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:letterSpacing="-0.05" />
+                    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/text_hint_day" android:id="@id/humidityUnitTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%" android:includeFontPadding="false" android:layout_marginStart="6.0dip" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

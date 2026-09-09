@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/lyricViewContainer" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <me.wcy.lrcview.LrcView android:layout_gravity="center" android:id="@id/lrcView" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.deepalhome.launcher.music.ttml.TtmlLyricView android:layout_gravity="center" android:id="@id/ttmlView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

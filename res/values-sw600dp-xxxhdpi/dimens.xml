@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="file_browser_icon_size">56.0dip</dimen>
+    <dimen name="file_browser_item_height">88.0dip</dimen>
+    <dimen name="material_button_height">64.0dip</dimen>
+    <dimen name="material_button_min_width">120.0dip</dimen>
+    <dimen name="tab_layout_text_size">28.0sp</dimen>
+    <dimen name="wallpaper_grid_spacing">24.0dip</dimen>
+    <dimen name="wallpaper_item_subtitle_text_size">20.0sp</dimen>
+    <dimen name="wallpaper_item_title_text_size">28.0sp</dimen>
+    <dimen name="wallpaper_management_action_text_size">28.0sp</dimen>
+    <dimen name="wallpaper_management_nav_text_size">32.0sp</dimen>
+    <dimen name="wallpaper_management_title_text_size">42.0sp</dimen>
+    <dimen name="wallpaper_preview_button_height">56.0dip</dimen>
+    <dimen name="wallpaper_preview_button_text_size">22.0sp</dimen>
+</resources>

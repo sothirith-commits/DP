@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:tag="layout/about_setting_view_0" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/leftColumn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="@dimen/settings_item_spacing_half">
+            <LinearLayout android:orientation="vertical" android:id="@id/aboutCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:gravity="center_vertical" android:id="@id/versionTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/maintainerCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_spacing">
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:gravity="center_vertical" android:id="@id/maintainerTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/about_maintainer_format" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/pmCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_spacing">
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:gravity="center_vertical" android:id="@id/pmTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/about_pm_format" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/helpCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_spacing">
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:id="@id/helpTitleTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/help" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/compileTimeCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_spacing">
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:gravity="center_vertical" android:id="@id/compileTimeTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/about_compile_time_placeholder" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/rightColumn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/settings_item_spacing_half">
+            <LinearLayout android:orientation="vertical" android:id="@id/specialThanksCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:gravity="center_vertical" android:id="@id/specialThanksTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/about_special_thanks_format" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/thanksCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_spacing">
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:gravity="center_vertical" android:id="@id/thanksTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/about_thanks_format" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/supportCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_spacing">
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:gravity="center_vertical" android:id="@id/supportTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/about_support_format" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/updateCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_spacing">
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:layout_gravity="center_vertical" android:id="@id/updateTitleTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/update_release" />
+                <View android:layout_gravity="end|top" android:id="@id/updateBadgeView" android:background="@drawable/s05_update_badge_dot" android:visibility="gone" android:layout_width="12.0dip" android:layout_height="12.0dip" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/donateCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_spacing">
+                <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:id="@id/donateTitleTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/donate_title" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

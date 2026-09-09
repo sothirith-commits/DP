@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/recent_apps_widget_view_0" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <eightbitlab.com.blurview.BlurView android:id="@id/blurView" android:background="@drawable/time_weather_widget_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" app:blurOverlayColor="@color/white_60_transparent" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/actionContainer" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginHorizontal="12.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/appItem1" android:background="@drawable/energy_mode_item_unselected" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" android:paddingHorizontal="6.0dip" android:paddingVertical="18.0dip">
+            <FrameLayout android:layout_width="40.0dip" android:layout_height="40.0dip">
+                <com.makeramen.roundedimageview.RoundedImageView android:layout_gravity="center" android:id="@id/iconApp1" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="fitCenter" app:riv_corner_radius="8.0dip" />
+            </FrameLayout>
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:ellipsize="end" android:gravity="center" android:id="@id/labelApp1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:maxLines="1" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/appItem2" android:background="@drawable/energy_mode_item_unselected" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" android:paddingHorizontal="6.0dip" android:paddingVertical="18.0dip">
+            <FrameLayout android:layout_width="40.0dip" android:layout_height="40.0dip">
+                <com.makeramen.roundedimageview.RoundedImageView android:layout_gravity="center" android:id="@id/iconApp2" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="fitCenter" app:riv_corner_radius="8.0dip" />
+            </FrameLayout>
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:ellipsize="end" android:gravity="center" android:id="@id/labelApp2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:maxLines="1" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/appItem3" android:background="@drawable/energy_mode_item_unselected" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" android:paddingHorizontal="6.0dip" android:paddingVertical="18.0dip">
+            <FrameLayout android:layout_width="40.0dip" android:layout_height="40.0dip">
+                <com.makeramen.roundedimageview.RoundedImageView android:layout_gravity="center" android:id="@id/iconApp3" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="fitCenter" app:riv_corner_radius="8.0dip" />
+            </FrameLayout>
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:ellipsize="end" android:gravity="center" android:id="@id/labelApp3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:maxLines="1" android:includeFontPadding="false" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/allAppsItem" android:background="@drawable/energy_mode_item_unselected" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingHorizontal="6.0dip" android:paddingVertical="18.0dip">
+            <FrameLayout android:layout_width="40.0dip" android:layout_height="40.0dip">
+                <com.makeramen.roundedimageview.RoundedImageView android:layout_gravity="center" android:id="@id/iconAllApps" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="fitCenter" app:riv_corner_radius="8.0dip" />
+            </FrameLayout>
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:ellipsize="end" android:gravity="center" android:id="@id/labelAllApps" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:maxLines="1" android:includeFontPadding="false" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

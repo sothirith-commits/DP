@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView android:id="@id/cardView" android:tag="layout/image_widget_picker_item_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" app:cardCornerRadius="20.0dip" app:cardElevation="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/coverIv" android:layout_width="fill_parent" android:layout_height="160.0dip" android:scaleType="centerCrop" android:contentDescription="@null" />
+        <TextView android:textSize="16.0sp" android:ellipsize="end" android:id="@id/nameTv" android:paddingTop="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+        <TextView android:textSize="13.0sp" android:ellipsize="end" android:id="@id/sourceTv" android:paddingTop="4.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

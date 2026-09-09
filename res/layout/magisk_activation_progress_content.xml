@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/iconContainer" android:padding="12.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="136.0dip" android:layout_height="136.0dip" android:layout_marginBottom="20.0dip">
+        <View android:id="@id/iconHaloView" android:background="@drawable/magisk_activation_icon_halo" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:layout_gravity="center" android:id="@id/iconIv" android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@drawable/ic_action_magisk" android:contentDescription="@string/activate_magisk" />
+    </FrameLayout>
+    <TextView android:textSize="22.0sp" android:textColor="@color/text_hint_day" android:gravity="center" android:id="@id/previousStepTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+    <TextView android:textSize="30.0sp" android:textStyle="bold" android:textColor="@color/accent" android:gravity="center" android:id="@id/currentStepTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:singleLine="true" />
+    <TextView android:textSize="22.0sp" android:textColor="@color/text_hint_day" android:gravity="center" android:id="@id/nextStepTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:singleLine="true" />
+</LinearLayout>

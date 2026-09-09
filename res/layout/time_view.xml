@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/time_view_0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="76.0sp" android:textColor="#ffffffff" android:id="@id/timeTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif-thin" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textSize="64.0sp" android:textColor="#ffffffff" android:id="@id/dayTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-72.0dip" android:fontFamily="@font/chinese_thin" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/timeTv" />
+    <TextView android:textSize="64.0sp" android:textColor="#ffffffff" android:id="@id/dateTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-72.0dip" android:fontFamily="sans-serif-thin" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/dayTv" />
+</androidx.constraintlayout.widget.ConstraintLayout>

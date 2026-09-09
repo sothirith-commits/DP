@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@id/dialogRootCard" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:cardCornerRadius="28.0dip" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.core.widget.NestedScrollView android:paddingTop="28.0dip" android:scrollbars="none" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:paddingStart="28.0dip" android:paddingEnd="28.0dip">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="24.0sp" android:textStyle="bold" android:id="@id/dialogTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_task" />
+                <EditText android:textSize="19.0sp" android:id="@id/taskNameEt" android:background="@drawable/edit_text_bg" android:layout_width="fill_parent" android:layout_height="58.0dip" android:layout_marginTop="20.0dip" android:hint="@string/task_name_hint" android:maxLines="1" android:inputType="text" android:imeOptions="actionDone" android:paddingStart="14.0dip" android:paddingEnd="14.0dip" />
+                <TextView android:textSize="17.0sp" android:id="@id/triggerLabelTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/trigger_label" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/triggerSelector" android:background="@drawable/spinner_bg" android:layout_width="fill_parent" android:layout_height="58.0dip" android:layout_marginTop="10.0dip" android:paddingStart="14.0dip" android:paddingEnd="14.0dip">
+                    <ImageView android:id="@id/triggerIconIv" android:layout_width="28.0dip" android:layout_height="28.0dip" />
+                    <TextView android:textSize="18.0sp" android:id="@id/triggerNameTv" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="10.0dip" />
+                    <ImageView android:id="@id/dropdownIconIv" android:layout_width="18.0dip" android:layout_height="18.0dip" android:src="@drawable/ic_dropdown" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                    <TextView android:textSize="17.0sp" android:id="@id/conditionsLabelTv" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Additional conditions (optional)" android:layout_weight="1.0" />
+                    <Button android:textSize="15.0sp" android:id="@id/addConditionBtn" android:layout_width="wrap_content" android:layout_height="44.0dip" android:text="Add condition" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:backgroundTint="@color/accent" app:cornerRadius="32.0dip" style="@style/Widget.App.Button.White" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/conditionLogicContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                    <TextView android:textSize="15.0sp" android:id="@id/conditionLogicHintTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Condition logic:" />
+                    <Button android:textSize="13.0sp" android:id="@id/conditionLogicAndBtn" android:layout_width="wrap_content" android:layout_height="36.0dip" android:text="All conditions met" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" android:layout_marginStart="8.0dip" app:cornerRadius="18.0dip" style="@style/Widget.App.Button.White" />
+                    <Button android:textSize="13.0sp" android:id="@id/conditionLogicOrBtn" android:layout_width="wrap_content" android:layout_height="36.0dip" android:text="Any condition met" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" android:layout_marginStart="8.0dip" app:cornerRadius="18.0dip" style="@style/Widget.App.Button.White" />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/conditionsRecyclerView" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:nestedScrollingEnabled="false" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/delete_red" android:id="@id/conflictHintTv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                    <TextView android:textSize="17.0sp" android:id="@id/actionsLabelTv" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/actions_label" android:layout_weight="1.0" />
+                    <Button android:textSize="15.0sp" android:id="@id/addActionBtn" android:layout_width="wrap_content" android:layout_height="44.0dip" android:text="@string/add_action" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:backgroundTint="@color/accent" app:cornerRadius="32.0dip" style="@style/Widget.App.Button.White" />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/actionsRecyclerView" android:paddingBottom="20.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="20.0dip" android:paddingBottom="28.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="28.0dip" android:paddingEnd="28.0dip">
+            <Button android:textSize="19.0sp" android:id="@id/cancelBtn" android:layout_width="wrap_content" android:layout_height="52.0dip" android:text="@string/dialog_cancel" android:paddingStart="28.0dip" android:paddingEnd="28.0dip" app:backgroundTint="@color/gray" app:cornerRadius="32.0dip" style="@style/Widget.App.Button.White" />
+            <Button android:textSize="19.0sp" android:id="@id/confirmBtn" android:layout_width="wrap_content" android:layout_height="52.0dip" android:text="@string/dialog_confirm" android:paddingStart="28.0dip" android:paddingEnd="28.0dip" android:layout_marginStart="24.0dip" app:backgroundTint="@color/accent" app:cornerRadius="32.0dip" style="@style/Widget.App.Button.White" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

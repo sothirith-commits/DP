@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/actionItemRoot" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:paddingStart="6.0dip" android:paddingEnd="10.0dip" android:paddingVertical="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/dragHandleIv" android:padding="5.0dip" android:layout_width="38.0dip" android:layout_height="38.0dip" android:src="@drawable/ic_drag_handle" />
+    <ImageView android:id="@id/actionIconIv" android:padding="5.0dip" android:layout_width="38.0dip" android:layout_height="38.0dip" android:layout_marginStart="4.0dip" />
+    <FrameLayout android:gravity="center_vertical" android:id="@id/actionParamContainer" android:clipChildren="false" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="52.0dip" android:layout_weight="1.0" android:layout_marginStart="10.0dip" />
+    <ImageView android:id="@id/removeActionBtn" android:background="@drawable/delete_btn_bg" android:padding="7.0dip" android:layout_width="34.0dip" android:layout_height="34.0dip" android:src="@drawable/ic_close" android:contentDescription="@string/delete" android:layout_marginStart="10.0dip" />
+</LinearLayout>

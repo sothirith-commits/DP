@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:tag="layout/floating_ball_settings_view_0" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/floatingBallCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/floating_ball_title" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallEnableTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/floating_ball_enable_title" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallEnableHintTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/floating_ball_enable_hint" />
+                </LinearLayout>
+                <com.kyleduo.switchbutton.SwitchButton android:id="@id/floatingBallSwitch" android:layout_width="80.0dip" android:layout_height="44.0dip" app:kswBackColor="@drawable/switch_btn_bg" app:kswThumbColor="@color/white" app:kswThumbMargin="8.0dip" app:kswThumbRangeRatio="2.3" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/floatingBallDetailsContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_spacing">
+                <LinearLayout android:orientation="vertical" android:id="@id/floatingBallAppearanceCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="@dimen/settings_item_spacing_half">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallAppearanceTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/floating_ball_appearance_title" />
+                    <TextView android:textSize="18.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallSizeTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/floating_ball_size_title" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/text_light_night" android:gravity="center_horizontal" android:id="@id/floatingBallSizeValueTv" android:layout_width="48.0dip" android:layout_height="wrap_content" />
+                        <SeekBar android:id="@id/floatingBallSizeSeekbar" android:layout_width="0.0dip" android:layout_height="wrap_content" android:max="240" android:layout_weight="1.0" android:min="64" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/text_hint_night" android:id="@id/floatingBallSizeMaxTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="240" />
+                    </LinearLayout>
+                    <TextView android:textSize="18.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallOpacityTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/floating_ball_opacity_title" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/text_light_night" android:gravity="center_horizontal" android:id="@id/floatingBallOpacityValueTv" android:layout_width="48.0dip" android:layout_height="wrap_content" />
+                        <SeekBar android:id="@id/floatingBallOpacitySeekbar" android:layout_width="0.0dip" android:layout_height="wrap_content" android:max="100" android:layout_weight="1.0" android:min="10" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/text_hint_night" android:id="@id/floatingBallOpacityMaxTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100%" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <TextView android:textSize="18.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallIconTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/floating_ball_icon_title" />
+                            <TextView android:textSize="14.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallIconHintTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/floating_ball_icon_hint" />
+                        </LinearLayout>
+                        <ImageView android:id="@id/floatingBallIconPreview" android:layout_width="36.0dip" android:layout_height="36.0dip" android:scaleType="centerInside" android:layout_marginEnd="8.0dip" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/text_light_day" android:gravity="center" android:id="@id/floatingBallIconBtn" android:background="@drawable/dialog_ok_btn_bg" android:layout_width="wrap_content" android:layout_height="32.0dip" android:text="@string/floating_ball_icon_action" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <TextView android:textSize="18.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallEdgeTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/floating_ball_edge_adsorption_title" />
+                            <TextView android:textSize="14.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallEdgeHintTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/floating_ball_edge_adsorption_hint" />
+                        </LinearLayout>
+                        <com.kyleduo.switchbutton.SwitchButton android:id="@id/floatingBallEdgeSwitch" android:layout_width="80.0dip" android:layout_height="44.0dip" app:kswBackColor="@drawable/switch_btn_bg" app:kswThumbColor="@color/white" app:kswThumbMargin="8.0dip" app:kswThumbRangeRatio="2.3" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <TextView android:textSize="18.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallBackgroundTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/floating_ball_background_title" />
+                            <TextView android:textSize="14.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallBackgroundHintTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/floating_ball_background_hint" />
+                        </LinearLayout>
+                        <com.kyleduo.switchbutton.SwitchButton android:id="@id/floatingBallBackgroundSwitch" android:layout_width="80.0dip" android:layout_height="44.0dip" app:kswBackColor="@drawable/switch_btn_bg" app:kswThumbColor="@color/white" app:kswThumbMargin="8.0dip" app:kswThumbRangeRatio="2.3" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <TextView android:textSize="18.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallTouchSoundTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/floating_ball_touch_sound_title" />
+                            <TextView android:textSize="14.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallTouchSoundHintTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/floating_ball_touch_sound_hint" />
+                        </LinearLayout>
+                        <com.kyleduo.switchbutton.SwitchButton android:id="@id/floatingBallTouchSoundSwitch" android:layout_width="80.0dip" android:layout_height="44.0dip" app:kswBackColor="@drawable/switch_btn_bg" app:kswThumbColor="@color/white" app:kswThumbMargin="8.0dip" app:kswThumbRangeRatio="2.3" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/floatingBallGestureCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/settings_item_spacing_half">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/text_light_night" android:id="@id/floatingBallGestureTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/floating_ball_gesture_title" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/floatingBallGestureContainer" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

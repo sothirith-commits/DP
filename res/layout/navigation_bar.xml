@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_gravity="center_vertical" android:id="@id/cardView" android:tag="layout/navigation_bar_0" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" app:cardBackgroundColor="@color/transparent" app:cardCornerRadius="@dimen/global_radius" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="@dimen/navigation_bar_height" android:layout_height="wrap_content">
+        <eightbitlab.com.blurview.BlurView android:id="@id/blurView" android:background="@color/transparent" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/navigationContent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/navigationContent" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/navigationContent" android:clipChildren="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:paddingVertical="16.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <com.deepalhome.launcher.shortcuts.ShortcutsView android:id="@id/shortcutsView" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <View android:id="@id/divider1" android:background="@drawable/navigation_bar_divider_night" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginHorizontal="20.0dip" android:layout_marginVertical="8.0dip" />
+            <com.deepalhome.launcher.music.MusicBar android:id="@id/musicBar" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <View android:id="@id/divider2" android:background="@drawable/navigation_bar_divider_night" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginHorizontal="20.0dip" android:layout_marginVertical="8.0dip" />
+            <ImageView android:id="@id/volumeBtn" android:padding="6.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/volume_high" android:scaleType="fitCenter" app:tint="@color/icon_night" />
+            <ImageView android:id="@id/homeBtn" android:padding="6.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/home_btn" android:scaleType="fitCenter" app:tint="@color/icon_night" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

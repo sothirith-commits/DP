@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/seat_vent_popup_window_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="start|bottom" android:id="@id/popupContainer" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/gearLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip" android:paddingVertical="16.0dip" />
+    </FrameLayout>
+</FrameLayout>

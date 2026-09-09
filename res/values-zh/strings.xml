@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="srl_component_falsify" formatted="false">"%s falsified area
+Represents the height dragged during runtime [%.1fdp]
+But nothing will be displayed"</string>
+    <string name="srl_content_empty">No content view found in SmartRefreshLayout. Did you forget to add it in the XML layout file?</string>
+</resources>

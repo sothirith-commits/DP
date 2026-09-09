@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/recent_apps_widgets_view_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.deepalhome.launcher.widget.RecentAppsWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="144.0dip" />
+</LinearLayout>

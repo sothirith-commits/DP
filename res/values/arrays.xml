@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="file_size_units">
+        <item>@string/file_size_unit_kb</item>
+        <item>@string/file_size_unit_mb</item>
+        <item>@string/file_size_unit_gb</item>
+        <item>@string/file_size_unit_tb</item>
+        <item>@string/file_size_unit_pb</item>
+        <item>@string/file_size_unit_eb</item>
+    </string-array>
+    <string-array name="music_progress_style_entries">
+        <item>Breathing Glow</item>
+        <item>Pulse Ripple</item>
+        <item>Orbital Ring</item>
+        <item>Heartbeat Pulse</item>
+        <item>Neon Flicker</item>
+        <item>Plasma Swirl</item>
+        <item>Custom</item>
+    </string-array>
+    <string-array name="system_app_name_whitelist">
+        <item>Settings</item>
+        <item>360 Surround View</item>
+        <item>360° Panoramic Surround View</item>
+        <item>Smart Parking Assist</item>
+        <item>HUAWEI ADS</item>
+        <item>Music</item>
+        <item>Phone</item>
+        <item>Dashcam</item>
+        <item>Scenario Mode</item>
+        <item>App Store</item>
+        <item>Quick Apps</item>
+        <item>File Manager</item>
+        <item>Camera</item>
+        <item>Energy Flow</item>
+        <item>Maintenance Service</item>
+        <item>E-Manual</item>
+        <item>Scene Blocks</item>
+        <item>360 Panorama</item>
+        <item>Vehicle Center</item>
+        <item>Phone Connectivity</item>
+        <item>Navigation</item>
+        <item>Parking Assist</item>
+        <item>Personalized Sound Effects</item>
+        <item>Dashcam</item>
+        <item>App Store</item>
+        <item>WebView Shell</item>
+    </string-array>
+</resources>

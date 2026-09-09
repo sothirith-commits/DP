@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/splash_window_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/splashLogoIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/splash_logo_day" />
+    <TextView android:textSize="40.0sp" android:layout_gravity="center|bottom" android:id="@id/startTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="88.0dip" android:text="" />
+</FrameLayout>

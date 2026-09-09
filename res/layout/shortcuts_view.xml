@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:tag="layout/shortcuts_view_0" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/recyclerView" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center" android:id="@id/folderView" android:background="@drawable/shortcuts_folder_bg" android:padding="4.0dip" android:layout_width="64.0dip" android:layout_height="64.0dip" android:overScrollMode="never" android:layout_marginVertical="16.0dip" app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" app:spanCount="2" />
+</LinearLayout>

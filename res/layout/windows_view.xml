@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eightbitlab.com.blurview.BlurView android:id="@id/blurView" android:tag="layout/windows_view_0" android:layout_width="fill_parent" android:layout_height="fill_parent" app:blurOverlayColor="#7f7f7f7f"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.deepalhome.launcher.view.DragLinearLayout android:orientation="horizontal" android:id="@id/windowContainer" android:paddingTop="@dimen/status_bar_height" android:paddingBottom="@dimen/window_container_vertical_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/space" android:layout_width="@dimen/window_gap" android:layout_height="0.0dip" />
+        <com.deepalhome.launcher.window.WindowView android:id="@id/window0" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <FrameLayout android:id="@id/dragBtnStart" android:layout_width="@dimen/window_gap" android:layout_height="fill_parent">
+            <View android:layout_gravity="center" android:id="@id/dragBtnStartView" android:background="@drawable/window_divider_day" android:layout_width="4.0dip" android:layout_height="96.0dip" />
+        </FrameLayout>
+        <com.deepalhome.launcher.window.WindowView android:id="@id/window1" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <FrameLayout android:id="@id/dragBtnCenter" android:layout_width="@dimen/window_gap" android:layout_height="fill_parent">
+            <View android:layout_gravity="center" android:id="@id/dragBtnCenterView" android:background="@drawable/window_divider_day" android:layout_width="4.0dip" android:layout_height="96.0dip" />
+        </FrameLayout>
+        <com.deepalhome.launcher.window.WindowView android:id="@id/window2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <FrameLayout android:id="@id/dragBtnEnd" android:visibility="invisible" android:layout_width="@dimen/window_gap" android:layout_height="fill_parent">
+            <View android:layout_gravity="center" android:id="@id/dragBtnEndView" android:background="@drawable/window_divider_day" android:layout_width="4.0dip" android:layout_height="96.0dip" />
+        </FrameLayout>
+    </com.deepalhome.launcher.view.DragLinearLayout>
+</eightbitlab.com.blurview.BlurView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/app_center_item_view_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:layout_marginBottom="44.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/iconContainer" android:layout_width="88.0dip" android:layout_height="88.0dip">
+        <com.makeramen.roundedimageview.RoundedImageView android:id="@id/iconIv" android:layout_width="88.0dip" android:layout_height="88.0dip" android:src="@drawable/ic_app_placeholder" android:scaleType="centerCrop" app:riv_corner_radius="12.0dip" />
+        <ImageView android:layout_gravity="end" android:id="@id/pinIv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/app_center_item_pin" />
+        <View android:layout_gravity="end|top" android:id="@id/updateBadgeView" android:background="@drawable/s05_update_badge_dot" android:visibility="gone" android:layout_width="14.0dip" android:layout_height="14.0dip" />
+    </FrameLayout>
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@id/nameTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:lines="2" android:layout_marginHorizontal="88.0dip" />
+</LinearLayout>

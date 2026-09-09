@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="floating_lock_hotspot_alpha">70.00001%</fraction>
+    <fraction name="floating_lyrics_hide_scale">95.00001%</fraction>
+    <fraction name="floating_lyrics_overshoot_tension">79.99999%</fraction>
+    <fraction name="floating_lyrics_show_scale">91.99999%</fraction>
+    <fraction name="music_background_scale">400.0%</fraction>
+    <fraction name="music_body_blend_black">29.999996%</fraction>
+    <fraction name="music_body_blend_white">29.999996%</fraction>
+    <fraction name="music_progress_drag_scale_y">200.0%</fraction>
+    <fraction name="music_progress_drag_text_scale">109.99756%</fraction>
+    <fraction name="music_title_blend_black">20.000004%</fraction>
+    <fraction name="music_title_blend_white">14.999998%</fraction>
+    <fraction name="scale_app_view_min">94.00001%</fraction>
+    <fraction name="scale_button_press">85.0%</fraction>
+    <fraction name="scale_edit_mode">84.0%</fraction>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/all_widgets_view_0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_24dp" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_24dp" android:showDividers="middle">
+        <com.deepalhome.launcher.time.TimeWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="288.0dip" />
+        <com.deepalhome.launcher.time.TimeWeatherWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="288.0dip" />
+    </LinearLayout>
+    <com.deepalhome.launcher.widget.TirePressureWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="288.0dip" />
+    <com.deepalhome.launcher.widget.RangeWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="wrap_content" />
+    <com.deepalhome.launcher.weather.WeatherWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="288.0dip" android:layout_height="144.0dip" />
+    <com.deepalhome.launcher.weather.WeatherForecastWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="288.0dip" />
+    <com.deepalhome.launcher.widget.MiTempWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="288.0dip" android:layout_height="144.0dip" />
+    <com.deepalhome.launcher.widget.WallpaperControlWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="144.0dip" />
+    <com.deepalhome.launcher.widget.ImageWidgetView android:layout_gravity="center_horizontal" android:background="@drawable/navigation_bar_bg" android:layout_width="144.0dip" android:layout_height="144.0dip" />
+    <com.deepalhome.launcher.widget.EnergyModeWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="144.0dip" />
+    <com.deepalhome.launcher.widget.DriveModeWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="144.0dip" />
+    <com.deepalhome.launcher.widget.RecentAppsWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="144.0dip" />
+    <com.deepalhome.launcher.widget.AirConditionModeWidgetView android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="144.0dip" />
+    <com.deepalhome.launcher.time.CompassClockWidgetView android:layout_gravity="center_horizontal" android:background="@drawable/navigation_bar_bg" android:layout_width="432.0dip" android:layout_height="432.0dip" />
+</LinearLayout>

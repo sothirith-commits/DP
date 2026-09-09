@@ -1,0 +1,104 @@
+.class public abstract Lcom/openos/virtualcar/IVirtualCar$Stub;
+.super Landroid/os/Binder;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/openos/virtualcar/IVirtualCar;
+
+
+# static fields
+.field public static final synthetic $r8$clinit:I
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+
+    const-string v0, "com.openos.virtualcar.IVirtualCar"
+
+    invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .locals 3
+
+    const-string v0, "com.openos.virtualcar.IVirtualCar"
+
+    const/4 v1, 0x1
+
+    if-ne p1, v1, :cond_0
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    invoke-interface {p0}, Lcom/openos/virtualcar/IVirtualCar;->setVirtualCarServiceHelper()V
+
+    return v1
+
+    :cond_0
+    const/4 v2, 0x2
+
+    if-ne p1, v2, :cond_1
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-interface {p0, p1}, Lcom/openos/virtualcar/IVirtualCar;->getVirtualCarService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object p0
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    return v1
+
+    :cond_1
+    const/4 v2, 0x3
+
+    if-eq p1, v2, :cond_3
+
+    const v2, 0x5f4e5446
+
+    if-eq p1, v2, :cond_2
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_2
+    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return v1
+
+    :cond_3
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-interface {p0}, Lcom/openos/virtualcar/IVirtualCar;->getVirtualCarConnectionType()I
+
+    move-result p0
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeInt(I)V
+
+    return v1
+.end method

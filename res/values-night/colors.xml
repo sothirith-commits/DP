@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="climate_panel_preview_level_active">@color/icon_night</color>
+    <color name="climate_panel_preview_level_inactive">#80ffffff</color>
+    <color name="climate_seat_vent_base">@color/white</color>
+    <color name="energy_item_border">#1affffff</color>
+    <color name="helper_card_bg">#ff1e1e1e</color>
+    <color name="helper_icon_bg_blue">#ff1a2a3d</color>
+    <color name="helper_icon_bg_deep_orange">#ff3d2a1a</color>
+    <color name="helper_icon_bg_green">#ff1a2e1a</color>
+    <color name="helper_icon_bg_orange">#ff3d2e1f</color>
+    <color name="helper_icon_bg_purple">#ff2a1a3d</color>
+    <color name="helper_icon_bg_red">#ff3d1a1a</color>
+    <color name="setting_bg">#ff121212</color>
+    <color name="text_color">#ffffffff</color>
+    <color name="text_color_subtitle">#ffb0b0b0</color>
+    <color name="wind_direction_icon_base">@color/icon_night</color>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:tag="layout/muyu_settings_view_0" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/muyuCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="@color/text_light_night" android:id="@id/muyuTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/muyu_title" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="20.0sp" android:textColor="@color/text_light_night" android:id="@id/muyuEnableTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/muyu_enable_title" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/text_light_night" android:id="@id/muyuEnableHintTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/muyu_enable_hint" />
+                </LinearLayout>
+                <com.kyleduo.switchbutton.SwitchButton android:id="@id/muyuEnableSwitch" android:layout_width="80.0dip" android:layout_height="44.0dip" app:kswBackColor="@drawable/switch_btn_bg" app:kswThumbColor="@color/white" app:kswThumbMargin="8.0dip" app:kswThumbRangeRatio="2.3" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/muyuDetailsContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_spacing">
+                <LinearLayout android:orientation="vertical" android:id="@id/muyuAppearanceCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="@dimen/settings_item_spacing_half">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/text_light_night" android:id="@id/muyuAppearanceTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/muyu_appearance_title" />
+                    <TextView android:textSize="18.0sp" android:textColor="@color/text_light_night" android:id="@id/muyuSizeTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/muyu_size_title" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/text_light_night" android:gravity="center_horizontal" android:id="@id/muyuSizeValueTv" android:layout_width="48.0dip" android:layout_height="wrap_content" />
+                        <SeekBar android:id="@id/muyuSizeSeekbar" android:layout_width="0.0dip" android:layout_height="wrap_content" android:max="200" android:layout_weight="1.0" android:min="80" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/text_hint_night" android:gravity="center" android:id="@id/muyuSizeMaxTv" android:layout_width="36.0dip" android:layout_height="wrap_content" android:text="200" />
+                    </LinearLayout>
+                    <TextView android:textSize="18.0sp" android:textColor="@color/text_light_night" android:id="@id/muyuOpacityTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/muyu_opacity_title" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/text_light_night" android:gravity="center_horizontal" android:id="@id/muyuOpacityValueTv" android:layout_width="48.0dip" android:layout_height="wrap_content" />
+                        <SeekBar android:id="@id/muyuOpacitySeekbar" android:layout_width="0.0dip" android:layout_height="wrap_content" android:max="100" android:layout_weight="1.0" android:min="10" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/text_hint_night" android:gravity="center" android:id="@id/muyuOpacityMaxTv" android:layout_width="36.0dip" android:layout_height="wrap_content" android:text="100%" />
+                    </LinearLayout>
+                    <TextView android:textSize="18.0sp" android:textColor="@color/text_light_night" android:id="@id/muyuColorTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/muyu_color_title" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/text_light_night" android:gravity="center_horizontal" android:id="@id/muyuColorValueTv" android:layout_width="48.0dip" android:layout_height="wrap_content" />
+                        <SeekBar android:id="@id/muyuColorSeekbar" android:layout_width="0.0dip" android:layout_height="wrap_content" android:max="360" android:layout_weight="1.0" android:min="0" />
+                        <View android:id="@id/muyuColorPreview" android:background="@drawable/muyu_merit_bg" android:layout_width="36.0dip" android:layout_height="24.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/muyuSafetyCard" android:background="@drawable/settings_section_bg_night" android:padding="20.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/settings_item_spacing_half">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/text_light_night" android:id="@id/muyuSafetyTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/muyu_safety_title" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <TextView android:textSize="18.0sp" android:textColor="@color/text_light_night" android:id="@id/muyuSafetyModeTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/muyu_safety_mode_title" />
+                            <TextView android:textSize="14.0sp" android:textColor="@color/text_light_night" android:id="@id/muyuSafetyModeHintTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/muyu_safety_mode_hint" />
+                        </LinearLayout>
+                        <com.kyleduo.switchbutton.SwitchButton android:id="@id/muyuSafetySwitch" android:layout_width="80.0dip" android:layout_height="44.0dip" app:kswBackColor="@drawable/switch_btn_bg" app:kswThumbColor="@color/white" app:kswThumbMargin="8.0dip" app:kswThumbRangeRatio="2.3" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <TextView android:textSize="18.0sp" android:textColor="@color/text_light_night" android:id="@id/muyuEdgeTitleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/muyu_edge_adsorption_title" />
+                            <TextView android:textSize="14.0sp" android:textColor="@color/text_light_night" android:id="@id/muyuEdgeHintTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/muyu_edge_adsorption_hint" />
+                        </LinearLayout>
+                        <com.kyleduo.switchbutton.SwitchButton android:id="@id/muyuEdgeSwitch" android:layout_width="80.0dip" android:layout_height="44.0dip" app:kswBackColor="@drawable/switch_btn_bg" app:kswThumbColor="@color/white" app:kswThumbMargin="8.0dip" app:kswThumbRangeRatio="2.3" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

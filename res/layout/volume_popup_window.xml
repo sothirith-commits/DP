@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/volume_popup_window_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="start|bottom" android:id="@id/popupContainer" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <eightbitlab.com.blurview.BlurView android:id="@id/backgroundView" android:background="@drawable/volume_popwindow_bg" android:visibility="gone" android:layout_width="464.0dip" android:layout_height="440.0dip" />
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.deepalhome.launcher.view.VerticalSeekBar android:layout_gravity="center" android:id="@id/mediaSb" android:layout_width="72.0dip" android:layout_height="280.0dip" app:backgroundColor="#33ffffff" app:cornerRadius="20.0dip" app:defaultImage="@mipmap/media_volume" app:defaultValue="10" app:imageEnabled="true" app:max="20" app:maxImage="@mipmap/media_volume" app:minImage="@mipmap/media_volume" app:progressColor="#ffffffff" app:step="1" app:textBottomPadding="20" app:textColor="#ffdbdbdb" app:textEnabled="true" app:textSize="24.0sp" />
+                <FrameLayout android:id="@id/moreBtn" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginTop="20.0dip">
+                    <View android:background="@drawable/more_volume_btn" android:layout_width="72.0dip" android:layout_height="72.0dip" />
+                    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/more_volume_setting" />
+                </FrameLayout>
+                <FrameLayout android:id="@id/mediaBtn" android:visibility="gone" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginTop="20.0dip">
+                    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/media_volume" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/navSbContainer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="60.0dip">
+                <com.deepalhome.launcher.view.VerticalSeekBar android:layout_gravity="center" android:id="@id/navSb" android:layout_width="72.0dip" android:layout_height="280.0dip" app:backgroundColor="#33ffffff" app:cornerRadius="20.0dip" app:defaultImage="@mipmap/media_volume" app:defaultValue="10" app:imageEnabled="false" app:max="20" app:maxImage="@mipmap/media_volume" app:minImage="@mipmap/media_volume" app:progressColor="#ffffffff" app:step="1" app:textBottomPadding="20" app:textColor="#ffdbdbdb" app:textEnabled="true" app:textSize="24.0sp" />
+                <FrameLayout android:id="@id/navBtn" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginTop="20.0dip">
+                    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/nav_volume" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/callSbContainer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="60.0dip">
+                <com.deepalhome.launcher.view.VerticalSeekBar android:layout_gravity="center" android:id="@id/callSb" android:layout_width="72.0dip" android:layout_height="280.0dip" app:backgroundColor="#33ffffff" app:cornerRadius="20.0dip" app:defaultImage="@mipmap/media_volume" app:defaultValue="10" app:imageEnabled="false" app:max="20" app:maxImage="@mipmap/media_volume" app:minImage="@mipmap/media_volume" app:progressColor="#ffffffff" app:step="1" app:textBottomPadding="20" app:textColor="#ffdbdbdb" app:textEnabled="true" app:textSize="24.0sp" />
+                <FrameLayout android:id="@id/callBtn" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginTop="20.0dip">
+                    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/call_volume" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>
